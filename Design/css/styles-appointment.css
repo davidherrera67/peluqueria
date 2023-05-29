@@ -1,0 +1,220 @@
+/*bg fondo moviendose*/
+h1 {
+    margin: 0;
+    padding-top: 3rem;
+    padding-left: 2rem;
+  }
+
+h2 {
+    margin: 0;
+    padding-top: 3rem;
+    padding-left: 2rem;
+  }
+
+body
+{
+    background: #f7f7f7;
+    position: relative;
+    margin: 0;
+}
+
+.sect {
+    width: 100%;
+    min-height: 500px;
+  }
+  #sect1,
+  #sect3 {
+    background-color: #3333337d;
+    color: #fff;
+  }
+  #sect2 {
+    background-color: #dddddd7d;
+    color: #333;
+  }
+  
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 105%;
+    min-height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
+    z-index: -2;
+}
+/*formulario*/
+.cliente_detalles_div .form-control
+{
+    background-color: #ffffff;
+    border-radius: 0;
+    padding: 25px 10px;
+    box-shadow: none;
+    border: 2px solid #eee;
+    margin: 10px 0px;
+}
+
+.cliente_detalles_div .form-control:focus 
+{
+    border-color: #9e8a78;
+    box-shadow: none;
+    outline: none;
+}
+/*cita estilos*/
+.header_texto
+{ 
+    color: rgb(2, 39, 139);
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.seccion_reserva
+{
+    margin: 50px auto;
+    max-width: 720px;
+}
+
+.objetos_tab
+{
+    overflow: hidden;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(90, 104, 155, 0.04), 0 0 10px 0 rgba(0, 0, 0, 0.04);
+}
+
+.listaElementoObjeto
+{
+    line-height: 1.16;
+    border-bottom: solid 2px #ddeb24ea;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 18px 14px 18px 14px;
+}
+
+.objeto_detalles
+{
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.radio_peluquero_selecionado
+{
+    pointer-events: none;
+    position: absolute;
+    clip: rect(0,0,0,0);
+}
+
+.objeto_label
+{
+    color: #ec7308;
+    border-color: #f19b50;
+    background: white;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active 
+{
+    color: #fff;
+    background-color: #9e8a78;
+    border-color: #9e8a78;
+}
+
+.objeto_parte_seleccionada
+{
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+}
+
+.btn_seleccion_objeto
+{
+    display: flex;
+    -webkit-box-pack: end;
+    width: 60px;
+    margin-left: 27px;
+    justify-content: flex-end;
+}
+
+
+
+.duracion_campo
+{
+    text-align: right;
+    min-width: 60px;
+    width: auto;
+    color: rgb(151, 151, 151);
+    line-height: 1.29;
+    font-size: 14px;
+}
+
+
+.precio
+{
+    width: auto;
+    display: flex;
+    margin-left: 30px;
+    -webkit-box-align: baseline;
+    align-items: baseline;
+}
+
+.precio_campo
+{
+    color: #4CAF50;
+}
+
+.buttons_over{
+    overflow: auto;
+    padding: 20px 0px;
+}
+
+/*css indicar paso por donde va*/
+
+.pasos_centrar{
+    text-align: center;
+}
+.paso 
+{
+    display: inline-block;
+    opacity: 0.6;
+    height: 20px;
+    width: 20px;
+    margin: 0 3px;
+    background-color: #1dc2ba;
+    border: 2px solid #eee; 
+    border-radius: 90%;
+}
+
+.paso.active 
+{
+    opacity: 1;
+}
+
+.paso.finish 
+{
+    background-color: #430aca;
+}
+
+.next_prev_buttons
+{
+    background-color: hsl(197, 84%, 52%);
+    color: #ffffff;
+    border: 2px solid #eee;
+    padding: 10px 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.tab_reserva
+{
+    display: none;
+}
+

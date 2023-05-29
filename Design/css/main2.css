@@ -1,0 +1,43 @@
+a, a:hover 
+{
+	text-decoration: none !important;
+}
+
+ul 
+{
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h2, h3, h4, h5, h6 
+{
+    font-family: 'Georgia', serif;
+}
+
+.padding-10 
+{
+    padding: 10px;
+}
+
+/*** START HTML PAGE STYLE ***/
+
+html
+{
+	scroll-behavior: smooth;
+}
+
+/*** END HTML PAGE STYLE ****/
+
+/*** START BODY STYLE ***/
+
+body
+{
+	font-size: 16px;
+	background-color: white;
+	font-family: 'Roboto', sans-serif;
+}
+
+/*** END BODY STYLE ****/
+

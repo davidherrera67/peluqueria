@@ -1,0 +1,7 @@
+$enable-gradients: true;
+
+
+.navbar{
+    $enable-gradients: true;
+    background-image: var(--bs-gradient);
+}

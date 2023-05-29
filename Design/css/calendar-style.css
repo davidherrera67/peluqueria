@@ -1,0 +1,70 @@
+.dias_de_citas {
+    display: flex;
+    height: 80px;
+    padding: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom: 2px solid rgb(158, 229, 247);
+    position: relative;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+}
+
+.dia_cita {
+    width: 15%;
+    color: rgb(30, 18, 207);
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.horas_de_reserva_disponibles_tabla {
+    border-top: 5px solid rgb(158, 229, 247);
+    border-bottom: 5px solid rgb(158, 229, 247);
+} 
+.horas_de_reserva_disponibles {
+    padding: 1px;
+    border-radius: 6px;
+    justify-content: space-between;
+    display: flex;
+    -webkit-box-pack: justify;
+}
+
+.hora_de_reserva_disponible:hover {
+    color: green;
+}
+
+.hora_de_reserva_disponible {
+    font-size: 11px;
+    line-height: 1.5;
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked+label {
+    color: rgb(46, 14, 226);
+}
+
+.horas_disponibles_de_reserva {
+    width: 20%;
+    text-align: center;
+}
+
+.calendario_tab {
+    width: 100%;
+    position: relative;
+    background: rgb(227, 236, 240);
+    box-shadow: rgba(51, 56, 75, 0.04) 0px 0px 5px 0px, rgba(0, 0, 0, 0.04) 0px 0px 10px 0px;
+    overflow: hidden;
+    border-radius: 4px;
+}
