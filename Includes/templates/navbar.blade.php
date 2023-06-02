@@ -12,16 +12,16 @@
         <div class="collapse navbar-collapse " id="navbarNav">
         <ul class="navbar-nav ms-5">
             <li class="nav-item ms-5">
-            <a class="nav-link active" aria-current="page" href="../peluqueria">INICIO</a>
+            <a class="nav-link active" aria-current="page" href="../peluqueria/index.php">INICIO</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="services">SERVICIOS</a>
+            <a class="nav-link" href="services.php">SERVICIOS</a>
             </li>
              <li class="nav-item">
-            <a class="nav-link" href="contact">CONTACTO</a>
+            <a class="nav-link" href="contact.php">CONTACTO</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="hairdressers">EQUIPO</a>
+            <a class="nav-link" href="hairdressers.php">EQUIPO</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="http://127.0.0.1:8000/login">TIENDA</a>
@@ -35,7 +35,7 @@
          <a href="http://127.0.0.1:8000/register" style="text-decoration: none; color:green;">registrarse</a>
         </div>
         <div class="btn btn-outline-dark me-5">
-         <a href="appointment" style="text-decoration: none;">Reservar una Cita</a>
+         <a href="appointment.php" style="text-decoration: none;">Reservar una Cita</a>
         </div>
     </div>
     </nav>

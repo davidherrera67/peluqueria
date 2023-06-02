@@ -18,7 +18,7 @@
 	<link href="Design/fonts/css/all.min.css" rel="stylesheet" type="text/css">
 	<!-- template start bootstrap 2 , v4.6.0-->
     <link href="Design/css/sb-admin-2.min.css" rel="stylesheet">
-	<link href="Design/css/main3.css" rel="stylesheet">
+	<link href="Design/css/main4.css" rel="stylesheet">
 	<link href="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.css" rel="stylesheet"/>
 
 </head>
@@ -44,9 +44,8 @@
 
 			<!-- Nav Item - Dashboard -->
 			<li class="nav-item active">
-				<a class="nav-link" href="index.php">
-					<i class="fas fa-fw fa-tachometer-alt"></i>
-					<span>PANEL ADMINISTRATIVO</span>
+				<a class="nav-link collapsed text-center text-light"  href="index.php">
+					<span>GESTIÓN DE CITAS</span>
 				</a>
 			</li>
 
@@ -62,7 +61,7 @@
 			<li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fa-sharp fa-solid fa-user-group fa-bounce"></i>
+                    <i class="fa-sharp fa-solid fa-user-group fa-bounce text-light"></i>
                     <span>PERSONAL & CLIENTES</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -76,7 +75,7 @@
 			 <!-- Nav Item - Charts -->
 			<li class="nav-item">
 				<a class="nav-link" href="hairdressers-schedule.php">
-				<i class="fa fa-calendar-days fa-flip"></i>
+				<i class="fa fa-calendar-days fa-flip text-light"></i>
 					<span>Horario del Personal</span>
 				</a>
 			</li>
@@ -93,8 +92,8 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo2"
                     aria-expanded="true" aria-controls="collapseTwo2">
-                    <i class="fa-sharp fa-solid fa-user-group fa-bounce"></i>
-                    <span>SERVICIOS DISPONIBLES</span>
+                    <i class="fa-sharp fa-solid fa-user-group fa-bounce text-light"></i>
+                    <span style="font-size:12px;">SERVICIOS DISPONIBLES</span>
                 </a>
                 <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-info py-2 collapse-inner rounded">
@@ -103,6 +102,22 @@
                     </div>
                 </div>
             </li>
+
+			<!-- Divider -->
+			<hr class="sidebar-divider">
+
+			<!-- Heading -->
+			<div class="sidebar-heading">
+			<span class="text-primary">GESTIÓN & ARQUEO DE CAJA</span>
+			</div>
+
+			<!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+				<a class="nav-link" href="boxs.php">
+				<i class="fa-solid fa-cash-register text-light"></i>
+					<span>CAJA</span>
+				</a>
+			</li>
 
 			<!-- Divider -->
 			<hr class="sidebar-divider d-none d-md-block">

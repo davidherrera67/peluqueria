@@ -18,7 +18,7 @@
 .login-titulo-input
 {
     font-size: 15px;
-    color: #0f1bc5;
+    color: #8184b8;
     text-transform: uppercase;
     padding-bottom: 11px;
     font-weight: bold;
@@ -30,14 +30,14 @@
 {
     margin-bottom: 10px;
     height: 50px;
-    background-color: rgb(99, 169, 240);
+    background-color: rgb(233, 236, 240);
 }
 
 
 .login button[type="submit"] 
 {
   background: rgb(3, 233, 72);
-  color: #0b77cf;
+  color: #5b9dd3;
   cursor: pointer;
   font-size: 20px;
   width: 50%;

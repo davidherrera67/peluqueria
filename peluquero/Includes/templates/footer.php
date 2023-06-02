@@ -44,7 +44,7 @@
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script src="Design/js/bootstrap.bundle.min.js"></script>
 	<script src="Design/js/sb-admin-2.min.js"></script>
-	<script src="Design/js/principal4.js"></script>
+	<script src="Design/js/principal7.js"></script>
 	<script src="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.js"></script>
 
 	</body>

@@ -1,6 +1,10 @@
 /* ============ datatables bootstrap 5 ============== */
 $(document).ready(function () {
-    $('#tablabootstrap5').DataTable();
+    $('#tablabootstrap5').DataTable({
+        language: {
+            url:'https:////cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json'
+        }
+    });
 });
 
 
@@ -35,7 +39,7 @@ $('.btn_cancelar_cita').click(function()
             $('#cancelar_cita_'+id_cita).modal('hide');
             
             //Show Success Message
-            swal("Cancelacion de cita","La cita ha sido cancelada exitosamente!", "success").then((value) => 
+            swal("Cancelación de cita","La cita ha sido cancelada exitosamente!", "success").then((value) => 
             {
                 window.location.replace("index.php");
             });
@@ -47,6 +51,42 @@ $('.btn_cancelar_cita').click(function()
         }
       });
 });
+
+
+$('.btn_endeudar_cita').click(function()
+{
+
+    var id_cita = $(this).data('id');
+    var motivo_endeudacion = $('#motivo_endeudacion_cita_'+id_cita).val();
+    var accion_ = 'Endeudar Cita';
+
+
+    $.ajax({
+        url: "ajax_files/appointments_ajax.php",
+        type: "POST",
+        data:{accion:accion_,id_cita:id_cita,motivo_endeudacion:motivo_endeudacion},
+        success: function (data) 
+        {
+            //Hide Modal
+            $('#endeudar_cita_'+id_cita).modal('hide');
+            
+            //Show Success Message
+            swal("Endeudación de cita","La cita ha sido endeudada exitosamente!", "success").then((value) => 
+            {
+                window.location.replace("index.php");
+            });
+            
+        },
+        error: function(xhr, status, error) 
+        {
+            alert('ERROR AL MANDAR LA REQUEST');
+        }
+      });
+});
+
+
+
+
 
 
 /*
@@ -234,6 +274,51 @@ $('.borrar_servicio_btn').click(function()
         }
     });
 });
+
+
+
+
+/*
+    cerrar caja
+    cancelar cita del appointments al hacer clikc al boton va aqui y
+    de aqui se abre el appointments_ajax donde hace el cancelar cita
+*/
+
+$('.btn_cerrar_caja').click(function()
+{
+    /* pasarle aqui los $_SESSION['saldoFinal'],$_SESSION['caja'])); y meterlos desde aqui como  en el cancelar cita de arriba 
+    asi: guardandolo en una variable. recoger esa variable desde el boxs_ajax.php
+    var motivo_cancelacion = $('#motivo_cancelacion_cita_'+id_cita).val(); */
+
+    var id_caja = $(this).data('id');
+    var saldo_final = $('#cerrar_'+id_caja).val();
+    
+    var accion_ = 'Cerrar Caja';
+
+
+    $.ajax({
+        url: "ajax_files/boxs_ajax.php",
+        type: "POST",
+        data:{accion:accion_,id_caja:id_caja,saldo_final:saldo_final},
+        success: function (data) 
+        {
+            //Hide Modal
+            $('#cerrar_caja_'+id_caja).modal('hide');
+            
+            //Show Success Message
+            swal("Caja cerrada","La caja ha sido cerrado exitosamente!", "success").then((value) => 
+            {
+                window.location.replace("boxs.php");
+            });
+            
+        },
+        error: function(xhr, status, error) 
+        {
+            alert('ERROR AL MANDAR LA REQUEST');
+        }
+      });
+});
+
 
 /*
    check mostrar horario

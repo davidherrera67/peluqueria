@@ -273,4 +273,9 @@ include "Includes/templates/navbar.blade.php";
 	</div>
 </section>
 
+
+
+<!-- aqui el tema del cliente correo mensaje-->
+<?php ?>
+
 <?php include "Includes/templates/footer.php"; ?>
