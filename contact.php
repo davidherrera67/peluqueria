@@ -2,7 +2,7 @@
 
 include "connect.php";
 include "Includes/templates/header.php";
-include "Includes/templates/navbar.blade.php";
+include "Includes/templates/navbar.php";
 ?>
 <h1 class="text-center px-6 py-3 text-primary">HORARIO CONTACTO<img src="Design/images/calendarbg.png" style="width:55px; px-4 py-2" alt="icono"></h1>
     

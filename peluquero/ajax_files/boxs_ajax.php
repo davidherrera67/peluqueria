@@ -3,9 +3,7 @@
 
 
 <?php
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\SMTP;
-    use PHPMailer\PHPMailer\Exception;
+    
 	if(isset($_POST['accion']) && $_POST['accion'] == "Cerrar Caja")
 	{
 		$id_caja = $_POST['id_caja'];
@@ -21,47 +19,6 @@
 
             $con->commit();
 
-
-            /* ENVIAR NOTIFICACIÓN */
-            
-            require 'vendor/autoload.php';
-           
-        
-            $email = new PHPMailer(true);
-            try {
-                $email->SMTPDebug = SMTP::DEBUG_SERVER;
-                $email->isSMTP();
-                $email->Host = 'smtp.gmail.com';
-                $email->SMTPAuth = true;
-                $email->Username = 'peluqueriadacor@gmail.com';
-                $email->Password = 'david123...';
-                $email->SMTPSecure = 'tls';
-                $email->Port = 587;
-        
-                $email->setFrom('peluqueriadacor@gmail.com','CITA');
-                $email->addAddress('herreracostadavid@gmail.com','Juan');
-                //$email->addCC('');
-                $email->isHTML(true);
-                $email->Subject = 'Cita';
-                $email->Body = 'Tiene cita en Peluqueria Dacor hoy';
-                $email->send();
-        
-                echo "<div class = 'alert alert-success text-dark'>";
-                echo 'correo enviado';
-                echo "</div>";
-            } catch (Exception $e) {
-                //$con->rollBack();
-        
-                echo "<div class = 'alert alert-danger text-dark'>";
-                echo $e->getMessage() .", " . $email->ErrorInfo;
-                echo "</div>";
-            }
-        
-        
-        
-
-            /*una vez se cierra la caja abro una nueva(si no pilla el id sin ponerle le puedo hacer auto increment a este id de la $_SESSION['caja'])*/
-            /*meter con insert todos los datos menos fecha de fin,(tener que meter la fecha de cierre desde la web)*/
         } catch (Exception $e) {
             $con->rollBack();
 

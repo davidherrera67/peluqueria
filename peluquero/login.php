@@ -101,7 +101,7 @@
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script src="Design/js/bootstrap.bundle.min.js"></script>
 	<script src="Design/js/sb-admin-2.min.js"></script>
-	<script src="Design/js/principal3.js"></script>
+	<script src="Design/js/principal8.js"></script>
 </body>
 
 </html>

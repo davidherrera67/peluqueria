@@ -21,15 +21,16 @@
 	<link href="Design/css/main4.css" rel="stylesheet">
 	<link href="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.css" rel="stylesheet"/>
 
+
+	
 </head>
 
 <body id="page-top">
-
 	<!-- Page Wrapper -->
-	<div id="wrapper">
-
+	<div id="wrapper" class="sect">
+		
 		<!-- Sidebar -->
-		<ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+		<ul class="navbar-nav bg-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
 			<!-- Sidebar - Brand -->
 			<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
@@ -114,10 +115,35 @@
 			<!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
 				<a class="nav-link" href="boxs.php">
-				<i class="fa-solid fa-cash-register text-light"></i>
+				<i class="fa-solid fa-cash-register fa-flip text-light"></i>
 					<span>CAJA</span>
 				</a>
 			</li>
+
+			<hr class="sidebar-divider">
+
+			<!-- Heading -->
+			<div class="sidebar-heading">
+			<span class="text-primary">GESTIÓN DE PRODUCTOS</span>
+			</div>
+
+			<!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+				<a class="nav-link" href="products.php">
+				<i class="fa-solid fa-scissors fa-flip text-light"></i>
+					<span>PRODUCTOS</span>
+				</a>
+			</li>
+
+			<!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+				<a class="nav-link" href="purchases.php">
+				<i class="fas fa-shopping-cart fa-flip text-light"></i>
+					<span style="font-size:12px;">REGISTRO DE COMPRAS</span>
+				</a>
+			</li>
+
+			
 
 			<!-- Divider -->
 			<hr class="sidebar-divider d-none d-md-block">
@@ -141,7 +167,7 @@
 
 					<!-- Sidebar Toggle (Topbar) -->
 					<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-						<i class="fa fa-bars"></i>
+						<i class="fa fa-bars text-success"></i>
 					</button>
 
 					<!-- Topbar Search -->

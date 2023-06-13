@@ -3,7 +3,7 @@
 include "connect.php";
 include "Includes/functions/functions.php";
 include "Includes/templates/header.php";
-include "Includes/templates/navbar.blade.php";
+include "Includes/templates/navbar.php";
 
 ?>
 
@@ -48,7 +48,7 @@ include "Includes/templates/navbar.blade.php";
 					if ($cliente_contador > 0) {
 						$id_cliente = $cliente_resultado["id_cliente"];
 					} else {
-						$stmtIDClienteActual = $con->prepare("SELECT AUTO_INCREMENT FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'peluqueria' AND TABLE_NAME = 'clients'");
+						$stmtIDClienteActual = $con->prepare("SELECT AUTO_INCREMENT FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'epiz_34332997_peluqueria' AND TABLE_NAME = 'clients'");
 						$stmtIDClienteActual->execute();
 						$id_cliente = $stmtIDClienteActual->fetch();
 
@@ -57,7 +57,7 @@ include "Includes/templates/navbar.blade.php";
 						$stmtCliente->execute(array($cliente_nombre, $cliente_apellido, $cliente_telefono, $cliente_correo));
 					}
 
-					$stmtIDCitaActual = $con->prepare("SELECT AUTO_INCREMENT FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'peluqueria' AND TABLE_NAME = 'appointments'");
+					$stmtIDCitaActual = $con->prepare("SELECT AUTO_INCREMENT FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'epiz_34332997_peluqueria' AND TABLE_NAME = 'appointments'");
 					$stmtIDCitaActual->execute();
 					$id_cita = $stmtIDCitaActual->fetch();
 
@@ -65,12 +65,20 @@ include "Includes/templates/navbar.blade.php";
 					if ($cliente_contador > 0) {
 						$stmt_cita->execute(array(Date("Y-m-d H:i"), $id_cliente, $peluquero_seleccionado, $inicio, $fin));
 					} else {
-						$stmt_cita->execute(array(Date("Y-m-d H:i"), $id_cliente[0], $peluquero_seleccionado, $inicio, $fin));
+						$stmtClienteNuevo= $con->prepare("SELECT * FROM clients ORDER BY id_cliente DESC LIMIT 1");
+						$stmtClienteNuevo->execute();
+						$cliente_nuevo = $stmtClienteNuevo->fetch();
+						$stmt_cita->execute(array(Date("Y-m-d H:i"), $cliente_nuevo["id_cliente"], $peluquero_seleccionado, $inicio, $fin));
 					}
 
 					foreach ($servicios_seleccionados as $servicio) {
+
+						$stmtCitaNueva= $con->prepare("SELECT * FROM appointments ORDER BY id_cita DESC LIMIT 1");
+						$stmtCitaNueva->execute();
+						$cita_nueva = $stmtCitaNueva->fetch();
+						
 						$stmt = $con->prepare("insert into services_reserved(id_cita, id_servicio) values(?, ?)");
-						$stmt->execute(array($id_cita[0], $servicio));
+						$stmt->execute(array($cita_nueva["id_cita"], $servicio));
 					}
 
 					echo "<div class = 'alert alert-success text-dark'>";

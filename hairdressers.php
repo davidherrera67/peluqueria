@@ -2,7 +2,7 @@
 
 include "connect.php";
 include "Includes/templates/header.php";
-include "Includes/templates/navbar.blade.php";
+include "Includes/templates/navbar.php";
 ?>
 
 

@@ -246,6 +246,33 @@ $('.borrar_servicio_btn').click(function()
       });
 });
 
+/*
+   eliminar producto
+*/
+
+
+$('.borrar_producto_btn').click(function()
+{
+    var id_producto = $(this).data('id');
+    var accion_ = "Borrar";
+
+    $.ajax(
+    {
+        url:"ajax_files/products_ajax.php",
+        method:"POST",
+        data:{id_producto:id_producto,accion:accion_},
+        success: function (data) 
+        {
+            swal("Producto eliminado!","El producto ha sido eliminado exitosamente de la base de datos de la peluqueria dacor!", "success").then((value) => {
+                window.location.replace("products.php");});     
+        },
+        error: function(xhr, status, error) 
+        {
+            alert('ERROR AL LANZAR LA REQUEST');
+        }
+      });
+});
+
 
 
 /*
@@ -308,7 +335,8 @@ $('.btn_cerrar_caja').click(function()
             //Show Success Message
             swal("Caja cerrada","La caja ha sido cerrado exitosamente!", "success").then((value) => 
             {
-                window.location.replace("boxs.php");
+                /* mandar notifiación por correo */
+                window.location.replace("../mail.php");
             });
             
         },
